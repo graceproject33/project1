@@ -31,6 +31,7 @@
  <div class="row book-items">
       <?php
             while($row = $result->fetch_assoc()) {
+              
       ?>
             <div class="col-sm-3">
                 <div class="card custom__card" style="width: 320px;">
@@ -41,10 +42,11 @@
                           <p class="card-text price">$ <?php echo $row["price"] ?></p>
                           <p class="card-text title">quantity  <?php echo $row["quantity"] ?></p>
                       </div>
-                   <a href="cart.php?id=<?php echo $row["id"] ?>"><button class="btn btn-success custom__cart">Add Cart</button></a>
+                   <a href="cart.php?id=<?php echo $row["id"];?>"><button class="btn btn-success custom__cart">Add Cart</button></a>
                 </div>
             </div>
          <?php
+          
           }
             } else {
           echo "0 results";
